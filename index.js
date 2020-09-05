@@ -43,7 +43,7 @@ exports.getTrivia = async function (options = {}){
             });
 
             if(result.data.response_code !== 0){
-                reject(new Error('Response code ' + result.data.response_code + ': ' + methods.getReponseError(result.data.response_code)));
+                reject(new Error('Response code ' + result.data.response_code + ': ' + methods.getTriviaReponseError(result.data.response_code)));
             }
             else{
                 var filteredResult = JSON.parse(JSON.stringify(result.data.results)
